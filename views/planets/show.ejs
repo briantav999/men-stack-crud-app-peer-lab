@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/app.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        <%=planet.name%>
+    </h1>
+   <% if(planet.noGravity){ %>
+        <p>This planet has no gravity!</p>
+   <%} else {%>
+        <p>This planet has gravity!</p>
+    <% }%>
+    <p>This planet has <%=planet.moons%> moons!</p>
+    <form action="/planets/<%=planet._id%>?_method=DELETE" method="POST">
+        <button>Delete <%= planet.name %></button>
+    </form>
+    <a href="/planets">Back to Planets</a>
+    <a href="/planets/<%=planet._id%>/edit">Update <%planet.name%></a>
+</body>
+</html>

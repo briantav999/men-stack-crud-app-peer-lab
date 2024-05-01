@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/app.css">
+    <title>Create</title>
+</head>
+<body>
+    <h1>Create a Planet</h1>
+    <form action="/planets" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" />
+
+        <label for="Moons">Moons:</label>
+        <input type="number" name="moons" />
+    
+        <label for="noGravity">Is there gravity?</label>
+        <input type="checkbox" name="noGravity" />
+    
+        <button type="submit">Add Planet</button>
+      </form>
+      <a href="/planets/">Back to Planets</a>
+</body>
+</html>
